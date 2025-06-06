@@ -110,6 +110,7 @@
             border: 1px solid #000;
             border-radius: 3px;
             font-weight: bold;
+            cursor: pointer;
         }
         .button:hover {
             background-color: #003366;
@@ -128,6 +129,37 @@
         .division-card h3 {
             margin-top: 0;
             color: #001f3f;
+        }
+
+        /* Complaint Form */
+        #complaintForm {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box; /* Important for padding and width */
+            border: 1px solid #ccc;
+        }
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        #form-status {
+            margin-top: 15px;
+            font-weight: bold;
         }
 
         /* Footer */
@@ -165,8 +197,8 @@
             <a href="#about">Über Uns</a>
             <a href="#divisions">Abteilungen</a>
             <a href="#recruitment">Rekrutierung</a>
+            <a href="#complaints">Beschwerde einreichen</a>
             <a href="#contact">Kontakt</a>
-            <a href="#news">Pressemitteilungen</a>
         </nav>
 
         <!-- Main Content -->
@@ -184,7 +216,7 @@
                         <p>"Die Stärke dieser Abteilung liegt in ihren Beamten und der Beziehung, die wir zu der von uns betreuten Gemeinschaft pflegen. Wir sind bestrebt, die höchsten Standards an Professionalität und Integrität aufrechtzuerhalten. Ihre Unterstützung ist für unseren Erfolg von entscheidender Bedeutung."</p>
                     </div>
                 </div>
-                <img src="https://i.ibb.co/ymyYFBHW/v4-G9lp-BUNqs-Z.webp" alt="LSPD Hauptquartier" class="hq-image" onerror="this.onerror=null;this.src='https.placehold.co/400x550/333333/ffffff?text=Bild+nicht+verfügbar';">
+                <img src="https://i.ibb.co/ymyYFBHW/v4-G9lp-BUNqs-Z.webp" alt="LSPD Hauptquartier" class="hq-image" onerror="this.onerror=null;this.src='https://placehold.co/400x550/333333/ffffff?text=Bild+nicht+verfügbar';">
             </section>
 
             <!-- Divisions Section -->
@@ -218,6 +250,61 @@
                 <a href="https://discord.com/channels/1287209548498604083/1287209549400637518" target="_blank" rel="noopener noreferrer" class="button">Zum Bewerbungsportal</a>
             </section>
 
+            <!-- Complaint Section -->
+            <section id="complaints" style="margin-top: 30px;">
+                <h2>Eine Beschwerde einreichen</h2>
+                <p>Das LSPD nimmt das Vertrauen der Öffentlichkeit ernst. Wenn Sie eine Beschwerde über das Verhalten eines Beamten einreichen möchten, füllen Sie bitte das folgende Formular vollständig aus.</p>
+                <form id="complaintForm">
+                    <fieldset>
+                        <legend><h3>Ihre Informationen</h3></legend>
+                        <div class="form-group">
+                            <label for="name">Ihr vollständiger Name:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefon">Ihre Telefonnummer:</label>
+                            <input type="tel" id="telefon" name="telefon" required>
+                        </div>
+                    </fieldset>
+                    
+                    <fieldset style="margin-top: 20px;">
+                        <legend><h3>Informationen zum Vorfall</h3></legend>
+                        <div class="form-group">
+                            <label for="datum">Datum des Vorfalls:</label>
+                            <input type="date" id="datum" name="datum" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="uhrzeit">Uhrzeit des Vorfalls:</label>
+                            <input type="time" id="uhrzeit" name="uhrzeit" required>
+                        </div>
+                    </fieldset>
+
+                     <fieldset style="margin-top: 20px;">
+                        <legend><h3>Informationen zum Beamten</h3></legend>
+                        <div class="form-group">
+                            <label for="beschuldigter_name">Name des Beamten (falls bekannt):</label>
+                            <input type="text" id="beschuldigter_name" name="beschuldigter_name">
+                        </div>
+                        <div class="form-group">
+                            <label for="dienstnummer">Dienstnummer des Beamten (falls bekannt):</label>
+                            <input type="text" id="dienstnummer" name="dienstnummer">
+                        </div>
+                    </fieldset>
+
+                    <fieldset style="margin-top: 20px;">
+                        <legend><h3>Schilderung des Vorfalls</h3></legend>
+                         <div class="form-group">
+                            <label for="was_ist_passiert">Bitte beschreiben Sie den Vorfall so detailliert wie möglich:</label>
+                            <textarea id="was_ist_passiert" name="was_ist_passiert" required></textarea>
+                        </div>
+                    </fieldset>
+                    
+                    <button type="submit" class="button" style="margin-top: 10px;">Beschwerde absenden</button>
+                    <div id="form-status"></div>
+                </form>
+            </section>
+
+
             <!-- Contact Section -->
             <section id="contact" style="margin-top: 30px;">
                 <h2>Kontaktinformationen</h2>
@@ -243,6 +330,74 @@
             </p>
         </footer>
     </div>
+    
+    <script>
+        document.getElementById('complaintForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Verhindert das normale Absenden des Formulars
+
+            const webhookURL = "https://discord.com/api/webhooks/1380676479578406963/Dr2jG3XZLocKEkJ7VbY9EtnrHQYHYyd2aFj8BJ-3_uWpe9dYkd3AsvtzwsUoLq3loACy";
+            const statusDiv = document.getElementById('form-status');
+
+            // Formulardaten sammeln
+            const formData = new FormData(event.target);
+            const name = formData.get('name');
+            const telefon = formData.get('telefon');
+            const datum = formData.get('datum');
+            const uhrzeit = formData.get('uhrzeit');
+            const beschuldigter_name = formData.get('beschuldigter_name') || 'Nicht angegeben';
+            const dienstnummer = formData.get('dienstnummer') || 'Nicht angegeben';
+            const was_ist_passiert = formData.get('was_ist_passiert');
+            
+            // Discord Embed erstellen
+            const payload = {
+                username: "LSPD Beschwerdesystem",
+                avatar_url: "https://i.ibb.co/5gR8SmSv/lspd-logo.png",
+                embeds: [{
+                    author: {
+                        name: "Neue Beschwerde eingegangen"
+                    },
+                    title: "Details zur Beschwerde",
+                    color: 15158332, // Rot
+                    fields: [
+                        { name: "Name des Beschwerdeführers", value: name, inline: true },
+                        { name: "Telefonnummer", value: telefon, inline: true },
+                        { name: "Datum des Vorfalls", value: datum, inline: true },
+                        { name: "Uhrzeit des Vorfalls", value: uhrzeit, inline: true },
+                        { name: "Name des Beamten", value: beschuldigter_name, inline: true },
+                        { name: "Dienstnummer", value: dienstnummer, inline: true },
+                        { name: "Schilderung des Vorfalls", value: was_ist_passiert, inline: false }
+                    ],
+                    timestamp: new Date().toISOString()
+                }]
+            };
+
+            // Daten an den Webhook senden
+            statusDiv.textContent = 'Beschwerde wird gesendet...';
+            statusDiv.style.color = 'blue';
+
+            fetch(webhookURL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(payload)
+            })
+            .then(response => {
+                if (response.ok) {
+                    statusDiv.textContent = 'Ihre Beschwerde wurde erfolgreich übermittelt.';
+                    statusDiv.style.color = 'green';
+                    event.target.reset(); // Formular zurücksetzen
+                } else {
+                    throw new Error('Fehler beim Senden der Beschwerde.');
+                }
+            })
+            .catch(error => {
+                console.error('Webhook Error:', error);
+                statusDiv.textContent = 'Fehler: Die Beschwerde konnte nicht gesendet werden. Bitte versuchen Sie es später erneut.';
+                statusDiv.style.color = 'red';
+            });
+        });
+    </script>
 
 </body>
 </html>

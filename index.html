@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los Santos Police Department - Official Website</title>
+    <style>
+        /* General Body Styles */
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e9e9e9;
+            color: #333;
+        }
+        .container {
+            width: 90%;
+            max-width: 960px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border: 1px solid #999;
+        }
+        
+        /* Header and Navigation */
+        .header {
+            background-color: #001f3f; /* Dark Navy Blue */
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            border-bottom: 5px solid #bda165; /* Gold/Brass color */
+        }
+        .header img.logo {
+            height: 80px;
+            margin-right: 20px;
+        }
+        .header h1 {
+            font-size: 24px;
+            margin: 0;
+            font-weight: bold;
+        }
+
+        .navbar {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        .navbar a {
+            margin-right: 20px;
+            text-decoration: none;
+            color: #001f3f;
+            font-weight: bold;
+        }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 20px;
+        }
+        .main-content h2 {
+            font-size: 22px;
+            color: #001f3f;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+        
+        /* Welcome Section */
+        .welcome-section {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+            flex-wrap: wrap; /* Allows wrapping on smaller screens */
+            justify-content: center; /* Center items horizontally */
+            align-items: center; /* Vertically align items */
+        }
+        .welcome-section .text-content {
+            flex: 1;
+            min-width: 300px; /* Ensures text content doesn't get too squished */
+        }
+        .welcome-section img.hq-image {
+            width: 100%;
+            max-width: 400px;
+            border: 1px solid #ccc;
+            object-fit: cover;
+        }
+        .welcome-section .text-content p {
+            line-height: 1.6;
+            margin-bottom: 1em;
+        }
+        .welcome-section .chief-message {
+            border: 1px solid #dde;
+            background-color: #f9f9f9;
+            padding: 15px;
+            margin-top: 20px;
+        }
+        .welcome-section .chief-message h3 {
+            margin-top: 0;
+        }
+
+        /* Button Style */
+        .button {
+            display: inline-block;
+            background-color: #001f3f;
+            color: #fff;
+            padding: 10px 15px;
+            text-decoration: none;
+            border: 1px solid #000;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .button:hover {
+            background-color: #003366;
+        }
+
+        /* Columns for Divisions */
+        .divisions {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .division-card {
+            border: 1px solid #ccc;
+            padding: 15px;
+        }
+        .division-card h3 {
+            margin-top: 0;
+            color: #001f3f;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #001f3f;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+        .footer a {
+            color: #aaa;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <img src="https://i.ibb.co/5gR8SmSv/lspd-logo.png" alt="LSPD Logo" class="logo" onerror="this.onerror=null;this.src='https://placehold.co/100x100/ffffff/001f3f?text=LSPD&font=times-new-roman';">
+            <div>
+                <h1>Los Santos Police Department</h1>
+                <p style="margin:0; font-style: italic;">"To Protect and to Serve"</p>
+            </div>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="navbar">
+            <a href="#about">Über Uns</a>
+            <a href="#divisions">Abteilungen</a>
+            <a href="#recruitment">Rekrutierung</a>
+            <a href="#contact">Kontakt</a>
+            <a href="#news">Pressemitteilungen</a>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <!-- Welcome Section -->
+            <section id="about" class="welcome-section">
+                <div class="text-content">
+                    <h2>Willkommen auf der offiziellen Webseite des LSPD</h2>
+                    <p>Im Namen der engagierten Männer und Frauen des Los Santos Police Department heiße ich Sie auf unserer offiziellen Webseite willkommen. Das LSPD setzt sich seit seiner Gründung für den Schutz der Bürgerinnen und Bürger von Los Santos ein.</p>
+                    <p>Unsere Mission ist es, Kriminalität zu verhindern, das Gesetz durchzusetzen und die öffentliche Sicherheit zu gewährleisten, während wir allen Personen mit Respekt und Würde begegnen. Wir glauben an eine starke Partnerschaft mit der Gemeinschaft, um unsere Stadt für alle zu einem sichereren Ort zu machen.</p>
+                    
+                    <div class="chief-message">
+                        <h3>Eine Nachricht vom Chief of Police</h3>
+                        <p>"Die Stärke dieser Abteilung liegt in ihren Beamten und der Beziehung, die wir zu der von uns betreuten Gemeinschaft pflegen. Wir sind bestrebt, die höchsten Standards an Professionalität und Integrität aufrechtzuerhalten. Ihre Unterstützung ist für unseren Erfolg von entscheidender Bedeutung."</p>
+                    </div>
+                </div>
+                <img src="https://i.ibb.co/ymyYFBHW/v4-G9lp-BUNqs-Z.webp" alt="LSPD Hauptquartier" class="hq-image" onerror="this.onerror=null;this.src='https.placehold.co/400x550/333333/ffffff?text=Bild+nicht+verfügbar';">
+            </section>
+
+            <!-- Divisions Section -->
+            <section id="divisions">
+                <h2>Abteilungen des LSPD</h2>
+                <div class="divisions">
+                    <div class="division-card">
+                        <h3>Patrol Division</h3>
+                        <p>Die Patrol Division ist das sichtbarste Element des Departments und für die allgemeine Strafverfolgung und die Reaktion auf Notrufe in der gesamten Stadt zuständig.</p>
+                    </div>
+                    <div class="division-card">
+                        <h3>Detective Bureau</h3>
+                        <p>Das Detective Bureau ist für die Untersuchung schwerer Verbrechen verantwortlich, darunter Raub, Einbruch und Tötungsdelikte. Unsere Detectives arbeiten unermüdlich daran, Fälle aufzuklären.</p>
+                    </div>
+                    <div class="division-card">
+                        <h3>Metropolitan Division</h3>
+                        <p>Diese spezialisierte Einheit, zu der auch S.W.A.T. gehört, befasst sich mit hochriskanten Situationen, Terrorismusbekämpfung und der Kontrolle von Menschenmengen.</p>
+                    </div>
+                    <div class="division-card">
+                        <h3>Traffic Division</h3>
+                        <p>Die Traffic Division setzt die Verkehrsgesetze durch, untersucht schwere Kollisionen und arbeitet daran, die Straßen von Los Santos für alle Verkehrsteilnehmer sicher zu halten.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recruitment Section -->
+            <section id="recruitment" style="margin-top: 30px;">
+                <h2>Werden Sie Teil des LSPD</h2>
+                <p>Das Los Santos Police Department sucht aktiv nach qualifizierten und engagierten Personen, die unserer Truppe beitreten möchten. Wir bieten eine lohnende Karriere im öffentlichen Dienst mit exzellenten Ausbildungsmöglichkeiten und Aufstiegschancen.</p>
+                <p>Wenn Sie glauben, dass Sie das Zeug dazu haben, unsere Werte Integrität, Mut und Engagement zu vertreten, ermutigen wir Sie, sich zu bewerben.</p>
+                <a href="https://discord.com/channels/1287209548498604083/1287209549400637518" target="_blank" rel="noopener noreferrer" class="button">Zum Bewerbungsportal</a>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" style="margin-top: 30px;">
+                <h2>Kontaktinformationen</h2>
+                <p><strong>Für alle Notfälle wählen Sie 9-1-1.</strong></p>
+                <p>Für nicht dringende Anfragen oder allgemeine Informationen:</p>
+                <ul>
+                    <li><strong>Adresse:</strong> Elgin Avenue, Vinewood Los Santos</li>
+                    <li><strong>Telefonzentrale (nicht-dringend):</strong> (000) 000-0911</li>
+                    <li><strong>Presseabteilung:</strong> (000) 000-0911</li>
+                    <li><strong>E-Mail für allgemeine Anfragen:</strong> contact@lspd.sa.gov</li>
+                </ul>
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2024 City of Los Santos. Alle Rechte vorbehalten.</p>
+            <p>
+                <a href="#">Datenschutzrichtlinie</a> | 
+                <a href="#">Nutzungsbedingungen</a> | 
+                <a href="#">Barrierefreiheit</a>
+            </p>
+        </footer>
+    </div>
+
+</body>
+</html>

@@ -29,6 +29,11 @@
         }
         .page.active {
             display: block;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         .card {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -42,14 +47,6 @@
             height: 100px;
             object-fit: contain;
         }
-        .form-input {
-            transition: border-color 0.3s ease;
-        }
-        .form-input:focus {
-            border-color: #3b82f6;
-            outline: none;
-            box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.4);
-        }
     </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
@@ -58,7 +55,7 @@
     <header class="header-bg text-white shadow-lg sticky top-0 z-50">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center space-x-4">
-                <img src="https://i.ibb.co/5gR8SmSv/lspd-logo.png" alt="LSPD Logo" class="h-14 w-auto">
+                <img src="https://i.ibb.co/5gR8SmSv/lspd-logo.png" alt="LSPD Logo" class="h-14 w-auto" onerror="this.onerror=null;this.src='https://placehold.co/56x56/0d254c/ffffff?text=LSPD';">
                 <div>
                     <h1 class="text-2xl font-bold tracking-wider">LOS SANTOS POLICE DEPARTMENT</h1>
                     <p class="text-sm text-gray-300">"To Protect and to Serve"</p>
@@ -109,17 +106,17 @@
                 <p class="text-lg mb-6">Die Patrol Division ist das Rückgrat des LSPD und für die primäre uniformierte Polizeipräsenz in der gesamten Stadt verantwortlich.</p>
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div class="card bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
-                        <img src="https://i.ibb.co/dw57NXbC/Patrol-Logo.png" alt="Patrol Unit Logo" class="unit-logo mb-4">
+                        <img src="https://i.ibb.co/dw57NXbC/Patrol-Logo.png" alt="Patrol Unit Logo" class="unit-logo mb-4" onerror="this.onerror=null;this.src='https://placehold.co/100x100/ffffff/000000?text=Patrol';">
                         <h4 class="text-xl font-bold mb-2">Patrol Unit</h4>
                         <p>Reagiert auf Notrufe, führt Verkehrskontrollen durch und sorgt für allgemeine Sicherheit.</p>
                     </div>
                     <div class="card bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
-                        <img src="https://i.ibb.co/xtW1xrsF/Air-Unit-Logo.png" alt="Air Unit Logo" class="unit-logo mb-4">
+                        <img src="https://i.ibb.co/xtW1xrsF/Air-Unit-Logo.png" alt="Air Unit Logo" class="unit-logo mb-4" onerror="this.onerror=null;this.src='https://placehold.co/100x100/ffffff/000000?text=Air+Unit';">
                         <h4 class="text-xl font-bold mb-2">Air Unit</h4>
                         <p>Bietet Luftunterstützung bei Verfolgungen, Aufklärung und taktischen Einsätzen.</p>
                     </div>
                     <div class="card bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
-                        <img src="https://i.ibb.co/VWNJHG03/Instructor-Logo.png" alt="Instructor Unit Logo" class="unit-logo mb-4">
+                        <img src="https://i.ibb.co/VWNJHG03/Instructor-Logo.png" alt="Instructor Unit Logo" class="unit-logo mb-4" onerror="this.onerror=null;this.src='https://placehold.co/100x100/ffffff/000000?text=Instructor';">
                         <h4 class="text-xl font-bold mb-2">Instructor Unit</h4>
                         <p>Verantwortlich für die Aus- und Fortbildung aller Beamten des LSPD.</p>
                     </div>
@@ -132,22 +129,22 @@
                 <p class="text-lg mb-6">Diese Division umfasst unsere hochspezialisierten Einheiten, die für verdeckte Ermittlungen, taktische Zugriffe und die Bekämpfung organisierter Kriminalität zuständig sind.</p>
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <div class="card bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
-                        <img src="https://i.ibb.co/hkmNg7K/Metro-SWAT-Logo.png" alt="Metro SWAT Logo" class="unit-logo mb-4">
+                        <img src="https://i.ibb.co/hkmNg7K/Metro-SWAT-Logo.png" alt="Metro SWAT Logo" class="unit-logo mb-4" onerror="this.onerror=null;this.src='https://placehold.co/100x100/ffffff/000000?text=SWAT';">
                         <h4 class="text-xl font-bold mb-2">Metro SWAT</h4>
                         <p>Die Spezialeinheit für Hochrisiko-Einsätze wie Geiselnahmen und Amoklagen.</p>
                     </div>
                     <div class="card bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
-                        <img src="https://i.ibb.co/MDK2Ds43/Detective-Logo.png" alt="Detective Unit Logo" class="unit-logo mb-4">
+                        <img src="https://i.ibb.co/MDK2Ds43/Detective-Logo.png" alt="Detective Unit Logo" class="unit-logo mb-4" onerror="this.onerror=null;this.src='https://placehold.co/100x100/ffffff/000000?text=Detective';">
                         <h4 class="text-xl font-bold mb-2">Detective Unit</h4>
                         <p>Ermittelt in schweren Verbrechen wie Mord, Raub und organisierter Kriminalität.</p>
                     </div>
                     <div class="card bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
-                        <img src="https://i.ibb.co/JwhJ8NHr/GTF-Logo.png" alt="Gang Task Force Logo" class="unit-logo mb-4">
+                        <img src="https://i.ibb.co/JwhJ8NHr/GTF-Logo.png" alt="Gang Task Force Logo" class="unit-logo mb-4" onerror="this.onerror=null;this.src='https://placehold.co/100x100/ffffff/000000?text=GTF';">
                         <h4 class="text-xl font-bold mb-2">Gang Task Force</h4>
                         <p>Spezialisiert auf die proaktive Bekämpfung von kriminellen Straßengangs.</p>
                     </div>
                     <div class="card bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
-                        <img src="https://i.ibb.co/TMpS8PgW/DEA-Logo.png" alt="DEA Logo" class="unit-logo mb-4">
+                        <img src="https://i.ibb.co/TMpS8PgW/DEA-Logo.png" alt="DEA Logo" class="unit-logo mb-4" onerror="this.onerror=null;this.src='https://placehold.co/100x100/ffffff/000000?text=DEA';">
                         <h4 class="text-xl font-bold mb-2">Drug Enforcement Adm.</h4>
                         <p>Zuständig für die Bekämpfung des illegalen Drogenhandels in Los Santos.</p>
                     </div>
@@ -174,52 +171,20 @@
                 <h3 class="text-2xl font-bold mb-4 mt-8">Bewerbungsprozess</h3>
                 <p class="text-lg leading-relaxed">Der Bewerbungsprozess ist anspruchsvoll und soll sicherstellen, dass nur die besten Kandidaten ausgewählt werden. Er umfasst typischerweise eine schriftliche Prüfung, einen Sporttest, psychologische Eignungstests und mehrere Interviews. Für eine erfolgreiche Bewerbung empfehlen wir, sich im Vorfeld gründlich zu informieren und vorzubereiten.</p>
                 <div class="text-center mt-10">
-                     <a href="https://discord.com/channels/1287209548498604083/1287209549400637518/1369048497915170857" target="_blank" rel="noopener noreferrer" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-10 rounded-lg text-lg transition duration-300">ZUM BEWERBUNGSPORTAL</a>
+                     <a href="https://discord.com/channels/1287209548498604083/1287209549400637518/1369048497915170857" target="_blank" rel="noopener noreferrer" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-10 rounded-lg text-lg transition duration-300 inline-block">ZUM BEWERBUNGSPORTAL</a>
                 </div>
             </div>
         </section>
 
-        <!-- Complaints Page -->
+        <!-- Complaints Page (Updated) -->
         <section id="complaints" class="page">
             <h2 class="text-4xl font-extrabold text-gray-900 border-b-4 border-blue-600 pb-2 mb-6">Eine Beschwerde einreichen</h2>
             <div class="bg-white p-8 rounded-lg shadow-md">
-                <p class="text-lg leading-relaxed mb-6">Das LSPD nimmt das Vertrauen der Öffentlichkeit sehr ernst. Jede Beschwerde über das Verhalten oder die Maßnahmen eines Beamten wird gründlich und unparteiisch untersucht. Bitte füllen Sie das folgende Formular so detailliert wie möglich aus.</p>
-                <form id="complaintForm">
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div class="form-group">
-                            <label for="name" class="block text-sm font-bold text-gray-700 mb-1">Ihr vollständiger Name</label>
-                            <input type="text" id="name" name="name" class="form-input w-full px-3 py-2 border border-gray-300 rounded-md" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone" class="block text-sm font-bold text-gray-700 mb-1">Ihre Telefonnummer</label>
-                            <input type="tel" id="phone" name="phone" class="form-input w-full px-3 py-2 border border-gray-300 rounded-md">
-                        </div>
-                        <div class="form-group">
-                            <label for="date" class="block text-sm font-bold text-gray-700 mb-1">Datum des Vorfalls</label>
-                            <input type="date" id="date" name="date" class="form-input w-full px-3 py-2 border border-gray-300 rounded-md" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="time" class="block text-sm font-bold text-gray-700 mb-1">Uhrzeit des Vorfalls</labe>
-                            <input type="time" id="time" name="time" class="form-input w-full px-3 py-2 border border-gray-300 rounded-md" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="officer_name" class="block text-sm font-bold text-gray-700 mb-1">Name des Beamten (falls bekannt)</label>
-                            <input type="text" id="officer_name" name="officer_name" class="form-input w-full px-3 py-2 border border-gray-300 rounded-md">
-                        </div>
-                         <div class="form-group">
-                            <label for="officer_badge" class="block text-sm font-bold text-gray-700 mb-1">Dienstnummer (falls bekannt)</label>
-                            <input type="text" id="officer_badge" name="officer_badge" class="form-input w-full px-3 py-2 border border-gray-300 rounded-md">
-                        </div>
-                    </div>
-                    <div class="mt-6">
-                        <label for="description" class="block text-sm font-bold text-gray-700 mb-1">Schilderung des Vorfalls</label>
-                        <textarea id="description" name="description" rows="6" class="form-input w-full px-3 py-2 border border-gray-300 rounded-md" required></textarea>
-                    </div>
-                    <div class="mt-8 text-right">
-                        <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300">Beschwerde absenden</button>
-                    </div>
-                </form>
-                <div id="form-status" class="mt-6 text-center font-bold"></div>
+                <p class="text-lg leading-relaxed mb-4">Das LSPD nimmt das Vertrauen der Öffentlichkeit sehr ernst. Jede Beschwerde über das Verhalten oder die Maßnahmen eines Beamten wird gründlich und unparteiisch untersucht.</p>
+                <p class="text-lg leading-relaxed mb-8">Um eine offizielle Beschwerde einzureichen, nutzen Sie bitte unser zentrales Beschwerdeportal. Sie werden auf eine externe, sichere Seite weitergeleitet, um Ihre Angaben zu erfassen. Klicken Sie dazu auf die folgende Schaltfläche:</p>
+                <div class="text-center mt-10">
+                    <a href="https://copnet.ch/beschweren?c=c5ad7d5c8e1cd311a06a038f2510bfdc" target="_blank" rel="noopener noreferrer" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-10 rounded-lg text-lg transition duration-300 inline-block">ZUM BESCHWERDEPORTAL</a>
+                </div>
             </div>
         </section>
 
@@ -249,18 +214,23 @@
                 });
 
                 navLinks.forEach(link => {
-                    link.classList.toggle('active', link.getAttribute('href') === `#${targetId}`);
+                    // Update active state for both mobile and desktop links
+                    const linkTargetId = new URL(link.href).hash;
+                    link.classList.toggle('active', linkTargetId === `#${targetId}`);
                 });
 
                 // Close mobile menu on navigation
                 mobileMenu.classList.add('hidden');
+                window.scrollTo(0, 0); // Scroll to top on page change
             };
 
             // Event listeners for navigation
             navLinks.forEach(link => {
                 link.addEventListener('click', function(e) {
                     e.preventDefault();
-                    window.location.hash = this.getAttribute('href');
+                    // Use the href for hash to allow multiple navs (mobile/desktop)
+                    const targetHash = new URL(this.href).hash;
+                    window.location.hash = targetHash;
                 });
             });
 
@@ -268,73 +238,11 @@
             window.addEventListener('hashchange', () => showPage(window.location.hash));
             
             // Initial page load
-            showPage(window.location.hash);
-
+            showPage(window.location.hash || '#home');
 
             // --- Mobile Menu Toggle ---
             mobileMenuButton.addEventListener('click', () => {
                 mobileMenu.classList.toggle('hidden');
-            });
-
-
-            // --- Complaint Form Submission ---
-            const complaintForm = document.getElementById('complaintForm');
-            complaintForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                const formStatus = document.getElementById('form-status');
-                const webhookURL = 'https://discord.com/api/webhooks/1385008495388266566/Ft1llrpnsW4p5hR7VXJ4Of8JvmhittoPGtyqoe90y4siTMY_GwjmHg0ijqxjRDxp2qeP';
-
-                const formData = new FormData(this);
-                const data = {
-                    name: formData.get('name'),
-                    phone: formData.get('phone'),
-                    date: formData.get('date'),
-                    time: formData.get('time'),
-                    officer_name: formData.get('officer_name') || 'N/A',
-                    officer_badge: formData.get('officer_badge') || 'N/A',
-                    description: formData.get('description'),
-                };
-
-                const payload = {
-                    username: "LSPD Beschwerdesystem",
-                    avatar_url: "https://i.ibb.co/5gR8SmSv/lspd-logo.png",
-                    embeds: [{
-                        color: 15158332, // Red
-                        title: "Neue Beschwerde eingegangen",
-                        fields: [
-                            { name: "Beschwerdeführer", value: data.name, inline: true },
-                            { name: "Telefon", value: data.phone || 'N/A', inline: true },
-                            { name: "Datum des Vorfalls", value: `${data.date} um ${data.time}`, inline: false },
-                            { name: "Name des Beamten", value: data.officer_name, inline: true },
-                            { name: "Dienstnummer", value: data.officer_badge, inline: true },
-                            { name: "Schilderung des Vorfalls", value: data.description }
-                        ],
-                        timestamp: new Date().toISOString()
-                    }]
-                };
-
-                formStatus.textContent = "Beschwerde wird übermittelt...";
-                formStatus.style.color = "blue";
-
-                fetch(webhookURL, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(payload)
-                })
-                .then(response => {
-                    if (response.ok) {
-                        formStatus.textContent = "Ihre Beschwerde wurde erfolgreich übermittelt. Vielen Dank.";
-                        formStatus.style.color = "green";
-                        complaintForm.reset();
-                    } else {
-                        throw new Error('Network response was not ok.');
-                    }
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    formStatus.textContent = "Fehler: Die Beschwerde konnte nicht übermittelt werden. Bitte versuchen Sie es später erneut.";
-                    formStatus.style.color = "red";
-                });
             });
         });
     </script>
